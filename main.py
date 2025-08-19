@@ -9,7 +9,7 @@ API_KEY = os.getenv("API_KEY")
 
 MY_EMAIL = os.getenv("MY_EMAIL")
 MY_PASSWORD = os.getenv("MY_PASSWORD")
-URL = os.getenv
+URL = os.getenv("URL")
 to_emails = [ "angelmiracles90@gmail.com","exercisespython@gmail.com"]
 
 params = {
@@ -119,4 +119,5 @@ if email_body_lines:
         print("❌ Failed to send email:", str(e))
 else:
     print("📭 No news to email.")
+
 
