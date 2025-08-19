@@ -2,14 +2,14 @@ import requests
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-import json
+import os
 
 
-API_KEY = "56BJXEYTBZ0412DN"
+API_KEY = os.getenv("API_KEY")
 
-MY_EMAIL = "exercisespython@gmail.com"
-MY_PASSWORD = "kesd ywxa qqrk fece"
-URL = "https://www.alphavantage.co/query"
+MY_EMAIL = os.getenv("MY_EMAIL")
+MY_PASSWORD = os.getenv("MY_PASSWORD")
+URL = os.getenv
 to_emails = [ "angelmiracles90@gmail.com","exercisespython@gmail.com"]
 
 params = {
@@ -119,3 +119,4 @@ if email_body_lines:
         print("❌ Failed to send email:", str(e))
 else:
     print("📭 No news to email.")
+
